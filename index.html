@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMT | PC Hardware Servicing</title>
+<link rel="stylesheet" href="index.css">
+<script src="act.js"></script>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- POPUP WELCOME MODAL -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Welcome to Our Website!</h2>
+            <p>
+                Welcome to the Instructional Media Toolkit on PC Hardware Servicing.
+                This platform provides learning resources, tutorials, and guides 
+                designed to help students master computer components, maintenance, 
+                and troubleshooting skills.
+            </p>
+            <button onclick="closeModal()">Explore Now</button>
+        </div>
+    </div>
+</body>
+<header>
+
+    <div class="navbar">
+    
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Computer Logo">
+            </a>
+        </div>
+        
+        <!-- SEARCH -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search components, pages..." onkeypress="handleKey(event)">
+            <button onclick="searchWebsite()">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    
+        <!-- HAMBURGER -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+    
+        <!-- NAVIGATION -->
+        <nav id="nav-links">
+    
+            <a href="index.html">Home</a>
+    
+            <div class="mega-dropdown">
+                <a href="compo.html" class="nav-link">Components ▾</a>
+    
+                <div class="mega-menu">
+    
+                    <div class="mega-column">
+                        <h3>PC PARTS</h3>   
+                        <a href="mb.html"><i class="fa fa-microchip"></i> Motherboard</a>
+                        <a href="procy.html"><i class="fa fa-microchip"></i> Processor</a>
+                        <a href="ram.html"><i class="fa fa-memory"></i> RAM</a>
+                        <a href="ssd.html"><i class="fa fa-hdd"></i> SSD</a>
+                        <a href="hdd.html"><i class="fa fa-hdd"></i> HDD</a>
+                        <a href="cpuf.html"><i class="fa fa-fan"></i> CPU Fan</a>
+                        <a href="gpu.html"><i class="fa fa-tv"></i> Graphics Card</a>
+                        <a href="cfan.html"><i class="fa fa-wind"></i> Cooling Fan</a>
+                        <a href="psu.html"><i class="fa fa-bolt"></i> Power Supply</a>
+                        <a href="case.html"><i class="fa fa-house"></i> CPU Case</a>
+                    </div>
+    
+                    <div class="mega-column">
+                        <h3>PERIPHERALS</h3>
+                        <a href="moni.html"><i class="fa fa-desktop"></i> Monitor</a>
+                        <a href="mouse.html"><i class="fa fa-computer-mouse"></i> Mouse</a>
+                        <a href="kb.html"><i class="fa fa-keyboard"></i> Keyboard</a>
+                        <a href="head.html"><i class="fa fa-headphones"></i> Headset</a>
+                        <a href="cam.html"><i class="fa fa-camera"></i> Camera</a>
+                        <a href="assemble.html"><i class="fa fa-desktop"></i>PC Assembling</a>
+                        <a href="quiz.html" style="text-decoration: none;">
+                            <button class="quiz-btn">START QUIZ</button>
+                        </a>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <a href="about.html">About</a>
+    
+        </nav>
+    
+    </div>
+    
+    </header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <!-- LEFT SIDE -->
+        <div class="hero-text">
+            <h1>Empowering Future Educators</h1>
+            <p>
+                A comprehensive instructional toolkit designed to enhance
+                technical knowledge and practical competency in
+                PC Hardware Servicing.
+            </p>
+
+            <button class="get-started-btn" onclick="goToComponents()">
+                GET STARTED
+            </button>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hero-card">
+            <h3>Platform Highlights</h3>
+            <ul>
+                <li>✔ 15 Hardware Videos</li>
+                <li>✔ Interactive Learning</li>
+                <li>✔ Component-Based Navigation</li>
+                <li>✔ Academic Instructional Design</li>
+            </ul>
+        </div>
+
+    </div>
+<!-- Activity Icon Button -->
+<div class="activity-icon" onclick="toggleActivity()">
+    📊
+</div>
+
+<!-- Popup Box -->
+<div class="activity-popup" id="activityPopup">
+    <h4>Platform Activity</h4>
+    <p>🟢 Online Users: <span id="online-count">0</span></p>
+    <p>⚫ Offline Users: <span id="offline-count">0</span></p>
+
+    <h5>Recent Visits</h5>
+    <ul id="recent-visits"></ul>
+</div>
+
+</section>
+
+
+<footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-left">
+        <h3>Instructional Media Toolkit for PC Assembly</h3>
+        <p>An innovative instructional platform designed to strengthen learners’ knowledge .</p>
+        <p>of computer hardware and practical PC assembly skills. By combining multimedia</p>
+        <p>resources, organized lessons, and guided demonstrations, this toolkit aims to</p>
+        <p>bridge theoretical concepts with hands-on technical application in ICT education.</p>
+      </div>
+  
+      <div class="footer-center">
+        <a href="faqs.html" class="faq-link">FAQs</a>
+  
+        <div class="faq-content" id="faqContent">
+          <p>• What is this toolkit about?</p>
+          <p>• Who can use this website?</p>
+          <p>• Is this for beginners?</p>
+        </div>
+      </div>
+    <!-- Contact Section -->
+    <div class="footer-right">
+        <h3>Contact Us @Gmail:</h3>
+        <p>adrianlegaspi012@email.com</p>
+        <p>reinoldpestano@gmail.com</p>
+        <p>aerongeraldvillarin@gmail.com</p>
+        <p>bayubolexter66@gmail.com</p>
+        <p>University of Rizal System</p>
+        <p>Morong Campus</p>
+    </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      © 2026 Media Toolkit for PC Assembly
+    </div>
+  </footer>
+
+<script>
+    
+function toggleDropdown() {
+    document.getElementById("megaMenu").classList.toggle("show");
+}
+
+function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("responsive");
+}
+    // Show modal when page loads
+    window.onload = function() {
+        document.getElementById("welcomeModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("welcomeModal").style.display = "none";
+    }
+    function searchComponent() {
+    let input = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (input.includes("motherboard") || input === "mb") {
+        window.location.href = "mb.html";
+    }
+    else if (input.includes("processor") || input.includes("cpu") || input === "procy") {
+        window.location.href = "procy.html";
+    }
+    else if (input.includes("ram") || input.includes("memory")) {
+        window.location.href = "ram.html";
+    }
+    else if (input.includes("ssd") || input.includes("ssd") || input.includes("storage")) {
+        window.location.href = "ssd.html";
+    }
+    else if (input.includes("hdd") || input.includes("hdd") || input.includes("storage")) {
+        window.location.href = "hdd.html";
+    }
+    else if (input.includes("cpu fan")) {
+        window.location.href = "cpuf.html";
+    }
+    else if (input.includes("graphics") || input.includes("gpu")) {
+        window.location.href = "gpu.html";
+    }
+    else if (input.includes("cooling fan")) {
+        window.location.href = "cfan.html";
+    }
+    else if (input.includes("power supply") || input.includes("psu")) {
+        window.location.href = "psu.html";
+    }
+    else if (input.includes("monitor")) {
+        window.location.href = "moni.html";
+    }
+    else if (input.includes("mouse")) {
+        window.location.href = "mouse.html";
+    }
+    else if (input.includes("keyboard")) {
+        window.location.href = "kb.html";
+    }
+    else if (input.includes("headset")) {
+        window.location.href = "head.html";
+    }
+    else if (input.includes("camera") || input.includes("webcam")) {
+        window.location.href = "cam.html";
+    }
+    else if (input.includes("PcAssemble") || input.includes("assemble")) {
+        window.location.href = "assemble.html";
+    }
+    else if (input.includes("CPUCase") || input.includes("case")) {
+        window.location.href = "case.html";
+    }
+    else {
+        alert("Component not found. Please try another keyword.");
+    }
+}
+
+document.getElementById("searchInput")
+.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        searchComponent();
+    }
+});
+
+function goToComponents() {
+    window.location.href = "compo.html";
+}
+
+
+function handleKey(event) {
+    if (event.key === "Enter") {
+        searchWebsite();
+    }
+}
+
+function searchWebsite() {
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (query === "") {
+        alert("Please enter a search term.");
+        return;
+    }
+
+    // Search index (Add everything important here)
+    const pages = {
+        "about": "about.html",
+        "faq": "faqs.html",
+        "faqs": "faqs.html",
+        "motherboard": "mobo.html",
+        "mb": "mobo.html",
+        "mother": "mobo.html",
+        "board": "mobo.html",
+        "processor": "procy.html",
+        "procy": "procy.html",
+        "proc": "procy.html",
+        "ram": "ram.html",
+        "random": "ram.html",
+        "ssd": "ssd.html",
+        "solid": "ssd.html",
+        "solid state drive": "ssd.html",
+        "state": "ssd.html",
+        "hdd": "hdd.html",
+        "hard disk": "hdd.html",
+        "hard": "hdd.html",
+        "disk drive": "hdd.html",
+        "cpu fan": "cpuf.html",
+        "cpu": "cpuf.html",
+        "cooler": "cpuf.html",
+        "monitor": "moni.html",
+        "moni": "moni.html",
+        "mouse": "mouse.html",
+        "keyboard": "kb.html",
+        "key": "kb.html",
+        "kb": "kb.html",
+        "headset": "head.html",
+        "head": "head.html",
+        "headphones": "head.html",
+        "earphones": "head.html",
+        "camera": "cam.html",
+        "cam": "cam.html",
+        "webcam": "cam.html",
+        "case": "case.html",
+        "house": "case.html",
+        "cpu case": "case.html",
+        "housing": "case.html",
+        "power": "psu.html",
+        "supply": "psu.html",   
+        "graphics": "gpu.html",
+        "gpu": "gpu.html",
+        "pc assembling": "assemble.html",
+        "assemble": "assemble.html",
+        "cooling": "cfan.html",
+        "cfan": "cfan.html",
+        "case fan": "cfan.html",
+    };
+
+    for (let keyword in pages) {
+        if (query.includes(keyword)) {
+            window.location.href = pages[keyword];
+            return;
+        }
+    }
+
+    alert("No results found. Try another keyword.");
+}
+document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+  btn.addEventListener("click", function() {
+    this.nextElementSibling.classList.toggle("show");
+  });
+});
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.onclick = function(){
+    nav.classList.toggle("active");
+
+    function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMT | PC Hardware Servicing</title>
+<link rel="stylesheet" href="index.css">
+<script src="act.js"></script>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="navbar">
+    
+        <!-- LOGO -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo.png" alt="Computer Logo">
+            </a>
+        </div>
+        
+        <!-- SEARCH -->
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search components, pages..." onkeypress="handleKey(event)">
+            <button onclick="searchWebsite()">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    
+        <!-- HAMBURGER -->
+        <div class="menu-toggle" id="menu-toggle">
+            ☰
+        </div>
+    
+        <!-- NAVIGATION -->
+        <nav id="nav-links">
+    
+            <a href="index.html">Home</a>
+    
+            <div class="mega-dropdown">
+                <a href="compo.html" class="nav-link">Components ▾</a>
+    
+                <div class="mega-menu">
+    
+                    <div class="mega-column">
+                        <h3>PC PARTS</h3>   
+                        <a href="mb.html"><i class="fa fa-microchip"></i> Motherboard</a>
+                        <a href="procy.html"><i class="fa fa-microchip"></i> Processor</a>
+                        <a href="ram.html"><i class="fa fa-memory"></i> RAM</a>
+                        <a href="ssd.html"><i class="fa fa-hdd"></i> SSD</a>
+                        <a href="hdd.html"><i class="fa fa-hdd"></i> HDD</a>
+                        <a href="cpuf.html"><i class="fa fa-fan"></i> CPU Fan</a>
+                        <a href="gpu.html"><i class="fa fa-tv"></i> Graphics Card</a>
+                        <a href="cfan.html"><i class="fa fa-wind"></i> Cooling Fan</a>
+                        <a href="psu.html"><i class="fa fa-bolt"></i> Power Supply</a>
+                        <a href="case.html"><i class="fa fa-house"></i> CPU Case</a>
+                    </div>
+    
+                    <div class="mega-column">
+                        <h3>PERIPHERALS</h3>
+                        <a href="moni.html"><i class="fa fa-desktop"></i> Monitor</a>
+                        <a href="mouse.html"><i class="fa fa-computer-mouse"></i> Mouse</a>
+                        <a href="kb.html"><i class="fa fa-keyboard"></i> Keyboard</a>
+                        <a href="head.html"><i class="fa fa-headphones"></i> Headset</a>
+                        <a href="cam.html"><i class="fa fa-camera"></i> Camera</a>
+                        <a href="assemble.html"><i class="fa fa-desktop"></i>PC Assembling</a>
+                        <a href="quiz.html" style="text-decoration: none;">
+                            <button class="quiz-btn">START QUIZ</button>
+                        </a>
+                    </div>
+    
+                </div>
+            </div>
+
+        
+        <a href="about.html">About</a>
+    </nav>
+</header>
+<section class="about-section">
+
+    <h2>Project Overview</h2>
+    <p>
+        The IMT PC Hardware Servicing Website is an instructional media toolkit
+        developed to enhance the teaching and learning process in the field of
+        Information and Communications Technology (ICT). This platform was
+        conceptualized as part of an academic thesis initiative aimed at
+        addressing the challenges encountered in traditional PC Hardware
+        Servicing instruction.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Rationale of the Study</h2>
+    <p>
+        In many educational institutions, the delivery of PC Hardware Servicing
+        lessons is limited by insufficient laboratory equipment, outdated
+        hardware components, time constraints, and the potential risk of damage
+        during hands-on activities. These limitations restrict students’
+        opportunities to repeatedly practice computer assembly and component
+        identification.
+    </p>
+
+    <p>
+        To address these concerns, this project introduces a digital,
+        component-based instructional platform that allows learners to explore,
+        understand, and review computer hardware concepts in a structured and
+        accessible manner. The website serves as a supplementary learning tool
+        designed to reinforce theoretical knowledge and prepare students for
+        practical laboratory activities.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Statement of the Problem</h2>
+    <p>
+        This project seeks to answer the following educational concerns:
+    </p>
+
+    <ul>
+        <li>How can instructional delivery in PC Hardware Servicing be improved through digital integration?</li>
+        <li>How can students strengthen their conceptual understanding of computer components before hands-on application?</li>
+        <li>How can interactive web-based tools enhance student engagement and knowledge retention?</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Objectives of the Project</h2>
+    <ul>
+        <li>To develop a structured digital learning platform for PC Hardware Servicing.</li>
+        <li>To provide accessible and organized information about computer components and peripherals.</li>
+        <li>To integrate interactive elements such as quizzes for knowledge reinforcement.</li>
+        <li>To support competency-based technical education aligned with curriculum standards.</li>
+    </ul>
+
+    <div class="section-divider"></div>
+
+    <h2>Educational Contribution</h2>
+    <p>
+        This website contributes to ICT education by promoting blended learning,
+        where digital tools complement traditional hands-on instruction. By
+        allowing students to review lessons outside the laboratory environment,
+        the platform strengthens independent learning, increases familiarity
+        with hardware components, and builds learner confidence.
+    </p>
+
+    <p>
+        The integration of structured modules, component categorization, and
+        formative assessments supports a learner-centered approach that enhances
+        both comprehension and retention.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Scope and Limitations</h2>
+    <p>
+        The website focuses primarily on the identification, description, and
+        functional understanding of internal PC components and basic
+        peripherals. While it includes interactive quizzes for reinforcement,
+        it does not replace actual laboratory experience. Instead, it serves as
+        a preparatory and supplementary instructional tool.
+    </p>
+
+    <div class="section-divider"></div>
+
+    <h2>Future Development</h2>
+    <p>
+        Future improvements may include the integration of a virtual PC
+        assembly simulator, performance tracking system, expanded assessment
+        modules, and enhanced multimedia resources to further enrich the
+        learning experience.
+    </p>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</section>
+<footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-left">
+        <h3>Instructional Media Toolkit for PC Assembly</h3>
+        <p>An innovative instructional platform designed to strengthen learners’ knowledge .</p>
+        <p>of computer hardware and practical PC assembly skills. By combining multimedia</p>
+        <p>resources, organized lessons, and guided demonstrations, this toolkit aims to</p>
+        <p>bridge theoretical concepts with hands-on technical application in ICT education.</p>
+      </div>
+  
+      <div class="footer-center">
+        <a href="faqs.html" class="faq-link">FAQs</a>
+  
+        <div class="faq-content" id="faqContent">
+          <p>• What is this toolkit about?</p>
+          <p>• Who can use this website?</p>
+          <p>• Is this for beginners?</p>
+        </div>
+      </div>
+    <!-- Contact Section -->
+    <div class="footer-right">
+        <h3>Contact Us</h3>
+        <p>Email: adrianlegaspi012@email.com</p>
+        <p>University of Rizal System</p>
+        <p>Morong Campus</p>
+    </div>
+  
+    </div>
+  
+    <div class="footer-bottom">
+      © 2026 Media Toolkit for PC Assembly
+    </div>
+  </footer>
+<script>function handleKey(event) {
+    if (event.key === "Enter") {
+        searchWebsite();
+    }
+}
+
+function searchWebsite() {
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (query === "") {
+        alert("Please enter a search term.");
+        return;
+    }
+
+    // Search index (Add everything important here)
+    const pages = {
+        "about": "about.html",
+        "faq": "faqs.html",
+        "faqs": "faqs.html",
+        "motherboard": "mobo.html",
+        "mb": "mobo.html",
+        "mother": "mobo.html",
+        "board": "mobo.html",
+        "processor": "procy.html",
+        "procy": "procy.html",
+        "proc": "procy.html",
+        "ram": "ram.html",
+        "random": "ram.html",
+        "ssd": "ssd.html",
+        "solid": "ssd.html",
+        "solid state drive": "ssd.html",
+        "state": "ssd.html",
+        "hdd": "hdd.html",
+        "hard disk": "hdd.html",
+        "hard": "hdd.html",
+        "disk drive": "hdd.html",
+        "cpu fan": "cpuf.html",
+        "cpu": "cpuf.html",
+        "cooler": "cpuf.html",
+        "monitor": "moni.html",
+        "moni": "moni.html",
+        "mouse": "mouse.html",
+        "keyboard": "kb.html",
+        "key": "kb.html",
+        "kb": "kb.html",
+        "headset": "head.html",
+        "head": "head.html",
+        "headphones": "head.html",
+        "earphones": "head.html",
+        "camera": "cam.html",
+        "cam": "cam.html",
+        "webcam": "cam.html",
+        "case": "case.html",
+        "house": "case.html",
+        "cpu case": "case.html",
+        "housing": "case.html",
+        "power": "psu.html",
+        "supply": "psu.html",   
+        "graphics": "gpu.html",
+        "gpu": "gpu.html",
+        "pc assembling": "assemble.html",
+        "assemble": "assemble.html",
+        "cooling": "cfan.html",
+        "cfan": "cfan.html",
+        "case fan": "cfan.html",
+    };
+
+    for (let keyword in pages) {
+        if (query.includes(keyword)) {
+            window.location.href = pages[keyword];
+            return;
+        }
+    }
+    
+
+    alert("No results found. Try another keyword.");
+    const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.onclick = function(){
+    nav.classList.toggle("active");
+
+    function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+}
+}
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMT | PC Hardware Servicing</title>
+<link rel="stylesheet" href="index.css">
+<script src="act.js"></script>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+        <div class="navbar">
+    
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Computer Logo">
+                </a>
+            </div>
+            
+            <!-- SEARCH -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search components, pages..." onkeypress="handleKey(event)">
+                <button onclick="searchWebsite()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        
+            <!-- HAMBURGER -->
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+        
+            <!-- NAVIGATION -->
+            <nav id="nav-links">
+        
+                <a href="index.html">Home</a>
+        
+                <div class="mega-dropdown">
+                    <a href="compo.html" class="nav-link">Components ▾</a>
+        
+                    <div class="mega-menu">
+        
+                        <div class="mega-column">
+                            <h3>PC PARTS</h3>   
+                            <a href="mb.html"><i class="fa fa-microchip"></i> Motherboard</a>
+                            <a href="procy.html"><i class="fa fa-microchip"></i> Processor</a>
+                            <a href="ram.html"><i class="fa fa-memory"></i> RAM</a>
+                            <a href="ssd.html"><i class="fa fa-hdd"></i> SSD</a>
+                            <a href="hdd.html"><i class="fa fa-hdd"></i> HDD</a>
+                            <a href="cpuf.html"><i class="fa fa-fan"></i> CPU Fan</a>
+                            <a href="gpu.html"><i class="fa fa-tv"></i> Graphics Card</a>
+                            <a href="cfan.html"><i class="fa fa-wind"></i> Cooling Fan</a>
+                            <a href="psu.html"><i class="fa fa-bolt"></i> Power Supply</a>
+                            <a href="case.html"><i class="fa fa-house"></i> CPU Case</a>
+                        </div>
+        
+                        <div class="mega-column">
+                            <h3>PERIPHERALS</h3>
+                            <a href="moni.html"><i class="fa fa-desktop"></i> Monitor</a>
+                            <a href="mouse.html"><i class="fa fa-computer-mouse"></i> Mouse</a>
+                            <a href="kb.html"><i class="fa fa-keyboard"></i> Keyboard</a>
+                            <a href="head.html"><i class="fa fa-headphones"></i> Headset</a>
+                            <a href="cam.html"><i class="fa fa-camera"></i> Camera</a>
+                            <a href="assemble.html"><i class="fa fa-desktop"></i>PC Assembling</a>
+                            <a href="quiz.html" style="text-decoration: none;">
+                                <button class="quiz-btn">START QUIZ</button>
+                            </a>
+                        </div>
+        
+                    </div>
+                </div>
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<script defer src="js/script.js"></script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <section class="components-section">
+
+        <h2 class="section-title">PC Parts</h2>
+    
+        <div class="components-grid">
+
+            <a href="mb.html" class="component-card">
+    
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/mb.mp4" type="video/mp4">
+                    </video>
+                </div>
+            
+                <i class="fas fa-microchip"></i>
+                <h3>Motherboard</h3>  
+            </a>
+            <a href="procy.html" class="component-card">
+                
+                <div class="video-preview">
+                <video muted loop>
+                    <source src="videos/proc.mp4" type="video/mp4">
+                </video>
+            </div>
+                <i class="fas fa-microchip"></i>
+                <h3>Processor</h3>
+            </a>
+    
+            <a href="ram.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/ram.mp4" type="video/mp4">
+                    </video>
+                </div>
+                
+                <i class="fas fa-memory"></i>
+                <h3>RAM</h3>
+            </a>
+    
+            <a href="ssd.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/ssd.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-hdd"></i>
+                <h3>SSD</h3>
+            </a>
+    
+            <a href="hdd.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/hdd.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-database"></i>
+                <h3>HDD</h3>
+            </a>
+    
+            <a href="gpu.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/gpu.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-tv"></i>
+                <h3>Graphics Card</h3>
+            </a>
+    
+            <a href="psu.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/psu.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-bolt"></i>
+                <h3>Power Supply</h3>
+            </a>
+    
+            <a href="cfan.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/cpufan.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-fan"></i>
+                <h3>CPU Fan</h3>
+
+                <a href="cpuf.html" class="component-card">
+                    <div class="video-preview">
+                        <video muted loop>
+                            <source src="videos/cpu fan.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <i class="fas fa-fan"></i>
+                    <h3>Cooling Fan</h3>
+                </a>
+                <a href="case.html" class="component-card">
+                    <div class="video-preview">
+                        <video muted loop>
+                            <source src="videos/case.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <i class="fas fa-box"></i>
+                    <h3>CPU Case</h3>
+                </a>
+                
+            </a>
+        </div>
+    
+    </section>
+    
+    
+    <section class="components-section">
+    
+        <h2 class="section-title">Peripherals</h2>
+    
+        <div class="components-grid">
+    
+            <a href="moni.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/monitor.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-desktop"></i>
+                <h3>Monitor</h3>
+            </a>
+    
+            <a href="mouse.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/MOUSE.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-computer-mouse"></i>
+                <h3>Mouse</h3>
+            </a>
+    
+            <a href="kb.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/kb.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-keyboard"></i>
+                <h3>Keyboard</h3>
+            </a>
+    
+            <a href="head.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/head.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-headphones"></i>
+                <h3>Headset</h3>
+            </a>
+    
+            <a href="cam.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/cam.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-camera"></i>
+                <h3>Camera</h3>
+            </a>
+            <a href="assemble.html" class="component-card">
+                <div class="video-preview">
+                    <video muted loop>
+                        <source src="videos/assemble.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <i class="fas fa-desktop"></i>
+                <h3>PC Assembling</h3>
+            </a>
+
+        </div>
+    
+</section>
+<div>
+<footer class="footer">
+
+
+    <div class="footer-bottom">
+        © 2026 Media Toolkit for PC Assembly | All Rights Reserved
+    </div>
+</footer>
+<script>function handleKey(event) {
+    if (event.key === "Enter") {
+        searchWebsite();
+    }
+}
+
+function searchWebsite() {
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (query === "") {
+        alert("Please enter a search term.");
+        return;
+    }
+
+    // Search index (Add everything important here)
+    const pages = {
+        "about": "about.html",
+        "faq": "faqs.html",
+        "faqs": "faqs.html",
+        "motherboard": "motherboard.html",
+        "mb": "motherboard.html",
+        "mother": "motherboard.html",
+        "board": "motherboard.html",
+        "processor": "processor.html",
+        "procy": "processor.html",
+        "proc": "processor.html",
+        "ram": "ram.html",
+        "random": "ram.html",
+        "ssd": "ssd.html",
+        "solid": "ssd.html",
+        "solid state drive": "ssd.html",
+        "state": "ssd.html",
+        "hdd": "hdd.html",
+        "hard disk": "hdd.html",
+        "hard": "hdd.html",
+        "disk drive": "hdd.html",
+        "cpu fan": "cpuf.html",
+        "cpu": "cpuf.html",
+        "cooler": "cpuf.html",
+        "monitor": "moni.html",
+        "moni": "moni.html",
+        "mouse": "mouse.html",
+        "keyboard": "kb.html",
+        "key": "kb.html",
+        "kb": "kb.html",
+        "headset": "head.html",
+        "head": "head.html",
+        "headphones": "head.html",
+        "earphones": "head.html",
+        "camera": "cam.html",
+        "cam": "cam.html",
+        "webcam": "cam.html",
+        "case": "case.html",
+        "house": "case.html",
+        "cpu case": "case.html",
+        "housing": "case.html",
+        "power": "psu.html",
+        "supply": "psu.html",   
+        "graphics": "gpu.html",
+        "gpu": "gpu.html",
+        "pc assembling": "assemble.html",
+        "assemble": "assemble.html",
+        "cooling": "cfan.html",
+        "cfan": "cfan.html",
+        "case fan": "cfan.html",
+    };
+
+    for (let keyword in pages) {
+        if (query.includes(keyword)) {
+            window.location.href = pages[keyword];
+            return;
+        }
+    }
+    alert("No results found. Try another keyword.");
+}
+document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+  btn.addEventListener("click", function() {
+    this.nextElementSibling.classList.toggle("show");
+  });
+});
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.onclick = function(){
+    nav.classList.toggle("active");
+
+    function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+}
+const cards = document.querySelectorAll(".component-card");
+
+cards.forEach(card => {
+
+    const video = card.querySelector("video");
+
+    if(video){
+        card.addEventListener("mouseenter", () => {
+            video.play();
+        });
+
+        card.addEventListener("mouseleave", () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+    }
+
+});
+</script>
+
+</body>
+</html>

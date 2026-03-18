@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate of Completion</title>
+    <style>
+        body { font-family: 'Georgia', serif; text-align: center; padding: 50px; background: #f0f0f0; }
+        .cert-container {
+            background: white; border: 10px double #2c3e50; padding: 50px;
+            width: 800px; margin: auto; box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+        h1 { font-size: 50px; color: #2c3e50; margin-bottom: 0; }
+        h2 { font-size: 20px; text-transform: uppercase; letter-spacing: 5px; color: #7f8c8d; }
+        .name { font-size: 35px; font-weight: bold; border-bottom: 2px solid #2c3e50; display: inline-block; margin: 20px 0; padding: 0 50px; }
+        .details { font-size: 18px; margin: 20px 0; color: #34495e; }
+        .score-badge { font-size: 24px; font-weight: bold; color: #27ae60; margin-top: 30px; }
+        @media print {
+            body { background: none; padding: 0; }
+            .cert-container { box-shadow: none; border: 10px double #000; margin-top: 0; }
+            button { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cert-container" id="capture">
+        <h2>Certificate of Achievement</h2>
+        <p>This is to certify that</p>
+        <div class="name" id="certName">Student Name</div>
+        <p class="details">of <span id="certSection">Year & Section</span></p>
+        <p>has successfully completed the</p>
+        <h3>PC Hardware Mastery Test</h3>
+        <p class="details">on <span id="certDate">Date</span></p>
+        <div class="score-badge"><span id="certScore">0/20</span></div>
+    </div>
+
+    <p><button onclick="window.print()" style="margin-top:20px; padding:10px 20px; cursor:pointer;">Print Certificate</button></p>
+
+    <script>
+      window.onload = function() {
+    // 1. Retrieve the saved data
+    const savedData = localStorage.getItem('quizResult');
+
+    if (savedData) {
+        const data = JSON.parse(savedData);
+
+        // 2. Inject the data into the HTML elements
+        // Ensure your HTML elements have these exact IDs
+        document.getElementById('certName').innerText = data.name;
+        document.getElementById('certSection').innerText = data.section;
+        document.getElementById('certDate').innerText = data.date;
+        document.getElementById('certScore').innerText = "SCORE: " + data.score;
+    }
+};
+    </script>
+    
+</body>
+</html>
+

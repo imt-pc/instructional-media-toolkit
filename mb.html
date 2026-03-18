@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMT | PC Hardware Servicing</title>
+<link rel="stylesheet" href="index.css">
+<script src="act.js"></script>
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+        <div class="navbar">
+    
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.png" alt="Computer Logo">
+                </a>
+            </div>
+            
+            <!-- SEARCH -->
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search components, pages..." onkeypress="handleKey(event)">
+                <button onclick="searchWebsite()">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        
+            <!-- HAMBURGER -->
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+        
+            <!-- NAVIGATION -->
+            <nav id="nav-links">
+        
+                <a href="index.html">Home</a>
+        
+                <div class="mega-dropdown">
+                    <a href="compo.html" class="nav-link">Components ▾</a>
+        
+                    <div class="mega-menu">
+        
+                        <div class="mega-column">
+                            <h3>PC PARTS</h3>   
+                            <a href="mb.html"><i class="fa fa-microchip"></i> Motherboard</a>
+                            <a href="procy.html"><i class="fa fa-microchip"></i> Processor</a>
+                            <a href="ram.html"><i class="fa fa-memory"></i> RAM</a>
+                            <a href="ssd.html"><i class="fa fa-hdd"></i> SSD</a>
+                            <a href="hdd.html"><i class="fa fa-hdd"></i> HDD</a>
+                            <a href="cpuf.html"><i class="fa fa-fan"></i> CPU Fan</a>
+                            <a href="gpu.html"><i class="fa fa-tv"></i> Graphics Card</a>
+                            <a href="cfan.html"><i class="fa fa-wind"></i> Cooling Fan</a>
+                            <a href="psu.html"><i class="fa fa-bolt"></i> Power Supply</a>
+                            <a href="case.html"><i class="fa fa-house"></i> CPU Case</a>
+                        </div>
+        
+                        <div class="mega-column">
+                            <h3>PERIPHERALS</h3>
+                            <a href="moni.html"><i class="fa fa-desktop"></i> Monitor</a>
+                            <a href="mouse.html"><i class="fa fa-computer-mouse"></i> Mouse</a>
+                            <a href="kb.html"><i class="fa fa-keyboard"></i> Keyboard</a>
+                            <a href="head.html"><i class="fa fa-headphones"></i> Headset</a>
+                            <a href="cam.html"><i class="fa fa-camera"></i> Camera</a>
+                            <a href="assemble.html"><i class="fa fa-desktop"></i>PC Assembling</a>
+                            <a href="quiz.html" style="text-decoration: none;">
+                                <button class="quiz-btn">START QUIZ</button>
+                            </a>
+                        </div>
+        
+                    </div>
+                </div>
+
+        <a href="about.html">About</a>
+    </nav>
+</header>
+
+<section class="motherboard-section">
+
+    <div class="container">
+
+<div class="lesson-nav">
+    <a href="index.html" class="nav-btn">← Back</a>
+    <div class="next-prev">
+        <a href="procy.html" class="nav-btn">Next →</a>
+    </div>
+</div>
+
+        <!-- TITLE -->
+        <h1 class="page-title">MOTHERBOARD</h1>
+        <p class="subtitle">
+            The Central Communication Hub of a Computer System
+        </p>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube-nocookie.com/embed/hpf6dxm2GHA?autoplay=1&mute=1&playsinline=1"
+                    title="YouTube video player"
+                    allow="autoplay; fullscreen"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <!-- DESCRIPTION -->
+        <div class="description">
+
+            <h2>Overview</h2>
+            <p>
+                The motherboard is the primary circuit board of a computer system. 
+                It connects and allows communication between essential hardware 
+                components such as the processor (CPU), memory (RAM), storage devices, 
+                graphics card, and power supply.
+            </p>
+
+            <h2>Main Functions</h2>
+            <ul>
+                <li>Provides communication pathways between components</li>
+                <li>Distributes power from the power supply to hardware parts</li>
+                <li>Houses the CPU socket and memory slots</li>
+                <li>Contains BIOS/UEFI firmware for system startup</li>
+                <li>Supports expansion slots for additional hardware</li>
+            </ul>
+
+            <h2>Key Components on the Motherboard</h2>
+            <ul>
+                <li><strong>CPU Socket</strong> – Holds the processor securely in place</li>
+                <li><strong>RAM Slots</strong> – Allows installation of memory modules</li>
+                <li><strong>Chipset</strong> – Controls data flow between processor and peripherals</li>
+                <li><strong>PCIe Slots</strong> – Used for graphics cards and expansion cards</li>
+                <li><strong>Power Connectors</strong> – Supplies power to the board and components</li>
+            </ul>
+
+            <h2>Importance in PC Hardware Servicing</h2>
+            <p>
+                Understanding the motherboard is essential in PC hardware servicing 
+                because it determines system compatibility, upgrade options, and overall 
+                performance. Students must identify motherboard types, form factors, 
+                and supported components to ensure proper assembly and troubleshooting.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+    <div class="footer-bottom">
+        © 2026 Media Toolkit for PC Assembly | All Rights Reserved
+    </div>
+</footer>
+
+<script>
+function toggleDropdown() {
+    document.getElementById("megaMenu").classList.toggle("show");
+}
+
+function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("responsive");
+}
+    // Show modal when page loads
+    window.onload = function() {
+        document.getElementById("welcomeModal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("welcomeModal").style.display = "none";
+    }
+
+    function searchComponent() {
+    let input = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (input.includes("motherboard") || input === "mb") {
+        window.location.href = "mb.html";
+    }
+    else if (input.includes("processor") || input.includes("cpu") || input === "procy") {
+        window.location.href = "procy.html";
+    }
+    else if (input.includes("ram") || input.includes("memory")) {
+        window.location.href = "ram.html";
+    }
+    else if (input.includes("ssd") || input.includes("hdd") || input.includes("storage")) {
+        window.location.href = "ssd.html";
+    }
+    else if (input.includes("cpu fan")) {
+        window.location.href = "cpuf.html";
+    }
+    else if (input.includes("graphics") || input.includes("gpu")) {
+        window.location.href = "gpu.html";
+    }
+    else if (input.includes("cooling fan")) {
+        window.location.href = "cfan.html";
+    }
+    else if (input.includes("power supply") || input.includes("psu")) {
+        window.location.href = "psu.html";
+    }
+    else if (input.includes("monitor")) {
+        window.location.href = "moni.html";
+    }
+    else if (input.includes("mouse")) {
+        window.location.href = "mouse.html";
+    }
+    else if (input.includes("keyboard")) {
+        window.location.href = "kb.html";
+    }
+    else if (input.includes("headset")) {
+        window.location.href = "head.html";
+    }
+    else if (input.includes("camera") || input.includes("webcam")) {
+        window.location.href = "cam.html";
+    }
+    else if (input.includes("CPUCase") || input.includes("case")) {
+        window.location.href = "case.html";
+    }
+    else {
+        alert("Component not found. Please try another keyword.");
+    }
+}
+
+document.getElementById("searchInput")
+.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        searchComponent();
+    }
+});
+function handleKey(event) {
+    if (event.key === "Enter") {
+        searchWebsite();
+    }
+}
+
+function searchWebsite() {
+    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+    if (query === "") {
+        alert("Please enter a search term.");
+        return;
+    }
+
+    // Search index (Add everything important here)
+    const pages = {
+        "about": "about.html",
+        "faq": "faqs.html",
+        "faqs": "faqs.html",
+        "motherboard": "mobo.html",
+        "mb": "mobo.html",
+        "mother": "mobo.html",
+        "board": "mobo.html",
+        "processor": "procy.html",
+        "procy": "procy.html",
+        "proc": "procy.html",
+        "ram": "ram.html",
+        "random": "ram.html",
+        "ssd": "ssd.html",
+        "solid": "ssd.html",
+        "solid state drive": "ssd.html",
+        "state": "ssd.html",
+        "hdd": "hdd.html",
+        "hard disk": "hdd.html",
+        "hard": "hdd.html",
+        "disk drive": "hdd.html",
+        "cpu fan": "cpuf.html",
+        "cpu": "cpuf.html",
+        "cooler": "cpuf.html",
+        "monitor": "moni.html",
+        "moni": "moni.html",
+        "mouse": "mouse.html",
+        "keyboard": "kb.html",
+        "key": "kb.html",
+        "kb": "kb.html",
+        "headset": "head.html",
+        "head": "head.html",
+        "headphones": "head.html",
+        "earphones": "head.html",
+        "camera": "cam.html",
+        "cam": "cam.html",
+        "webcam": "cam.html",
+        "case": "case.html",
+        "house": "case.html",
+        "cpu case": "case.html",
+        "housing": "case.html",
+        "power": "psu.html",
+        "supply": "psu.html",   
+        "graphics": "gpu.html",
+        "gpu": "gpu.html",
+        "pc assembling": "assemble.html",
+        "assemble": "assemble.html",
+        "cooling": "cfan.html",
+        "cfan": "cfan.html",
+        "case fan": "cfan.html",
+        
+
+    };
+
+    for (let keyword in pages) {
+        if (query.includes(keyword)) {
+            window.location.href = pages[keyword];
+            return;
+        }
+    }
+
+    alert("No results found. Try another keyword.");
+}
+document.querySelectorAll(".dropdown-toggle").forEach(btn => {
+  btn.addEventListener("click", function() {
+    this.nextElementSibling.classList.toggle("show");
+  });
+});
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav-links");
+
+toggle.onclick = function(){
+    nav.classList.toggle("active");
+
+    function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+}
+</script>
+
+</body>
+</html>
