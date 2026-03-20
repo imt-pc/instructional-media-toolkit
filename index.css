@@ -487,10 +487,9 @@ nav a{
       transition: 0.3s ease;
     }
   
-    .footer:hover,
-    .footer:focus-within {
-      transform: translateY(0);
-    }
+    .footer.active {
+        transform: translateY(0);
+      }
   
     /* Fake handle bar */
     .footer::before {
