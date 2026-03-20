@@ -338,6 +338,19 @@ toggle.onclick = function(){
     }
 }
 }
+         const footer = document.querySelector('.footer');
+
+  // Toggle footer when clicking the handle
+  footer.addEventListener('click', function (e) {
+    // Prevent closing immediately when clicking inside
+    e.stopPropagation();
+    footer.classList.toggle('active');
+  });
+
+  // Close footer when clicking anywhere outside
+  document.addEventListener('click', function () {
+    footer.classList.remove('active');
+  });
 </script>
 
 </body>
