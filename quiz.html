@@ -261,6 +261,18 @@
         20: "KEYBOARD"
     };
 
+     // ✅ VALIDATION FLAG
+     let isComplete = true;
+    let firstMissing = null;
+
+    // 🔹 Check Multiple Choice
+    for (let i = 1; i <= 10; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (!selected) {
+            isComplete = false;
+            if (!firstMissing) firstMissing = `Question ${i}`;
+        }
+    }
     // 1. Validate Multiple Choice
     for (let i = 1; i <= 10; i++) {
         const selected = document.querySelector(`input[name="q${i}"]:checked`);
@@ -277,6 +289,22 @@
                 </div>`;
         }
     }
+
+     // 🔹 Check Identification
+     for (let i = 11; i <= 20; i++) {
+        const input = document.getElementById(`ans${i}`);
+        if (!input.value.trim()) {
+            isComplete = false;
+            if (!firstMissing) firstMissing = `Question ${i}`;
+        }
+    }
+
+    // ❌ STOP if not complete
+    if (!isComplete) {
+        alert(`Please answer all questions first.\nMissing: ${firstMissing}`);
+        return;
+    }
+
 
     // 2. Validate Identification
     for (let i = 11; i <= 20; i++) {
